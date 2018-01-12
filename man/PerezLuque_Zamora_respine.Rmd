@@ -19,26 +19,23 @@ Laboratorio de Ecología. Centro Andaluz de Medio Ambiente
 
 Departamento de Ecología. Universidad de Granada 
 
-## Keywords
-shiny; cambio climático; resiliencia; pinares de repoblación
-
 # Resumen 
 
-Los pinares de repoblación son ecosistemas muy homogéneos con baja diversidad de especies, dificultando su capacidad de respuesta a eventos extremos. Los ecosistemas con mayor diversidad de especies son potencialmente mas resilientes ante alguna perturbación.
+Los ecosistemas con mayor diversidad de especies son potencialmente mas resilientes ante alguna perturbación. Los pinares de repoblación son ecosistemas muy homogéneos con baja diversidad de especies, dificultando su capacidad de respuesta a eventos extremos. 
 
 Las acciones de gestión en los pinares de repoblación han de ir encaminadas a aumentar la diversidad de tipos funcionales de especies y su heterogeneidad espacial, para así aumentar su resiliencia.
 
-En este trabajo presentamos una aplicación interactiva que pretende mostrar como varía la diversidad de especies (y por ende la resiliencia) en los pinares de repoblación en funcion de: la configuración del paisaje; la estructura interna y la composición de los vectores de dispersión. 
+En este trabajo presentamos una aplicación interactiva que muestra como varía la diversidad de especies (y por ende la resiliencia) en los pinares de repoblación en funcion de: la configuración del paisaje; la estructura interna y la composición de los vectores de dispersión. 
 
 Con esta aplicación se pretende ayudar a los usuarios a entender las acciones de gestión forestal que se pueden aplicar para mejorar la resiliencia de estos ecosistemas, así como visualizar algunos de los complejos mecanismos ecológicos que operan en los ecosistemas mediterráneos. 
 
 
 # Palabras clave 
-pinares de repoblación; resiliencia; cambio global; gestión adaptativa; divulgación; aplicación interactiva; 
+pinares de repoblación; resiliencia; simulación; cambio global; transferencia; divulgación
 
 
 # Abstract 
-Pine plantations are ecosystems with low species diversity and homogeneous structure, hindering their adaptation capacity to extreme events. Ecosystems with high levels of species diversity are potentially more resilient to disturbances. 
+Ecosystems with high levels of species diversity are potentially more resilient to disturbances. Pine plantations are ecosystems with low diversity and homogeneous structure, hindering their adaptation capacity to extreme events. 
 
 Management actions should be aimed to increase the species and functional diversity and also the spatial heterogeneity, in order to improve the resilience of this ecosystems. 
 
@@ -50,61 +47,55 @@ This application helps to understand the management actions that could be applie
 
 # Keywords 
 
-pine plantations; resilience; global change; adaptive management; interactive app
+pine plantations; resilience; simulation; global change; knowledge transference
 
 # Introducción 
 
-Los escenarios de cambio climático predicen un incremento en la frecuencia de eventos extremos (por ejemplo, sequía), que puede provocar una reducción en la resiliencia de los ecosistemas, es decir, en la capaciad para recuperar sus propiedades tras una una perturbación.
-
-Los pinares de repoblación, implantados en su mayoría durante la segunda mitad del siglo XX, se caracterizan por ser ecosistemas muy homogéneos, con altas densidades arbóreas y poca diversidad de especies. Estas características dificultan la capacidad de respuesta de estos ecosistemas a enventos extremos (como por ejemplo sequías). El aumento en la frecuencia de los eventos extremos puede provocar una reducción en la resiliencia de los ecosistemas, es decir, en la capacidad para recuperar sus propiedades tras una perturbación. 
+Los pinares de repoblación en ambientes mediterráneos, implantados en su mayoría durante la segunda mitad del siglo XX, se caracterizan por ser ecosistemas muy homogéneos, con altas densidades arbóreas y poca diversidad de especies. Estas características dificultan la capacidad de respuesta de estos ecosistemas a enventos extremos (como por ejemplo sequías). El aumento en la frecuencia de los eventos extremos que predicen los escenarios climáticos (CITA) puede provocar una reducción en la resiliencia de los ecosistemas, es decir, en la capacidad para recuperar sus propiedades tras una perturbación. 
 
 Los ecosistemas con mayor diversidad de especies son potencialmente mas resilientes ante alguna perturbación. Por tanto las acciones de gestión en los pinares de repoblación han de ir encaminadas a aumentar la diversidad de tipos funcionales de especies y su heterogeneidad espacial, para así aumentar su resiliencia. 
 
-En este trabajo presentamos un aplicación interactiva titulada ***ResPine*** (*Resilience of Pine plantations*) creada para mostrar como la diversidad de especies presentes en los pinares de repoblación varía en función de la configuración del paisaje; estructura interna de la repoblación (usos del suelo en el pasado, densidad de árboles); composición de los vectores de dispersión (aves, mamíferos). 
+En este trabajo presentamos un aplicación interactiva titulada ***ResPine*** (*Resilience of Pine plantations*) creada para mostrar como la diversidad de especies presentes en los pinares de repoblación varía en función de la configuración del paisaje; estructura interna de la repoblación (usos del suelo en el pasado, densidad de árboles), y la composición de los vectores de dispersión (aves, mamíferos). 
 
 El objetivo de la aplicación es ayudar a entender las acciones de gestión forestal que se pueden aplicar para mejorar la resiliencia de estos ecosistemas, así como visualizar algunos de los complejos mecanismos ecológicos que operan en los ecosistemas mediterráneos. Además es una forma de transferir conocimiento científico generado por grupos de investigación a la sociedad de una forma divulgativa.
 
 
 # Respine
 
-La aplicación ***ResPine*** (*Resilience of Pine plantations*) es una aplicación formada por tres módulos conceptuales que muestran como varía la riqueza de especies en los pinares de repoblación en función de: 
+***ResPine*** (*Resilience of Pine plantations*) es una aplicación construida utilizando el lenguaje de programación R [@r2017] y la tecnología Shiny [@shiny2017]. Se basa en la simulación del comportamiento de diferentes modulos (pinares de repoblación, vectores de dispersion, paisaje, etc.) en relación a la diversidad de especies presentes en una repoblación de pinar. Se han diseñado funciones específicas que modelizan como cada variable de interés afecta a la diversidad de especies. Para ello se han construido funciones específicas en R, basadas en los resultados obtenidos en diversos trabajos de investigación sobre naturalización de pinares y ecología del paisaje, llevados a cabo princiapalmente en Sierra Nevada (Gómez-Aparicio et al. 2009, Matías et al. 2010, Zamora et al. 2010, González-Moreno et al. 2011, Navarro-González et al. 2013).
 
-* la configuración del paisaje, 
+La aplicación está formada por tres módulos conceptuales que muestran como varía la riqueza de especies en los pinares de repoblación en función de: 
+
 * la estructura interna de la repoblación (usos del suelo en el pasado, densidad de árboles)
-* Composición de los vectores de dispersión (aves, mamíferos). 
+* la configuración del paisaje
+* composición de los vectores de dispersión (aves, mamíferos) 
 
-El usario modifica los parámetros de las diferentes variables que afectan a la diversidad de especies en un pinar de repoblación y se muestran los resultados de diferentes simulaciones tanto de una forma gráfica (en forma de mapa) como tabular. 
+El usario puede modificar los parámetros de las variables que componen estos módulos y ver como afectan a la diversidad de especies en un pinar de repoblación. El resultado de las simulaciones realizadas con los parámetros elegidos se visualizan de forma espacializada (Figura 1)
 
+# Modulos de la aplicación
 
-# Estructura interna de la repoblación
+## Estructura interna de la repoblación
 
-## Densidad de la repoblación
+En este módulo el usuario tiene que especificar diferentes aspectos relacionados con la estructura interna de la repoblación, la cual influye en la riqueza y diversidad de especies que estos ecosistemas pueden albergar [@GomezAparicio2009; @Gonzalez2011; @Navarro2013]. 
 
-En este módulo el usuario tiene que especificar diferentes aspectos relacionados con la estructura interna de la repoblación, la cual influye en la riqueza y diversidad de especies que estos ecosistemas pueden albergar [@GomezAparicio2009]. 
-
-La densidad tiene un efecto negativo en la diversidad y en la riqueza total de especies que encontramos bajo pinares de repoblación, decreciendo éstas al aumentar la densidad de la plantación [@GomezAparicio2009]. Una mayor densidad arbórea implica que entre menos luz, y por tanto menor diversidad de especies vegetales. Además, en los pinares muy densos, el flujo de entrada de semillas se ve obstaculizado tanto para las especies de dispersión por viento como para las dispersadas por las aves. Los arrendajos, por ejemplo, prefieren visitar zonas menos densas [Gomez2003]. 
+### Densidad de la repoblación
+La densidad de la repoblación tiene un efecto negativo en la diversidad y en la riqueza total de especies que encontramos bajo pinares de repoblación, decreciendo éstas al aumentar la densidad de la plantación [@GomezAparicio2009]. Una mayor densidad arbórea implica que entre menos luz, y por tanto menor diversidad de especies vegetales. Además, en los pinares muy densos, el flujo de entrada de semillas se ve obstaculizado tanto para las especies de dispersión por viento como para las dispersadas por las aves. Los arrendajos, por ejemplo, prefieren visitar zonas menos densas [@Gomez2003]. 
 
 El usuario elige entre tres tipos de densidades dentro del pinar de repoblación: baja (< 500 pies / ha), media (500 - 1500 pies /ha) y alta (> 1500 pies / ha), que afectarán a la diversidad de especies que se observa dentro de un pinar de repoblación [@GomezAparicio2009]. 
 
 
-## Uso del pasado 
+### Uso del pasado 
+Muchas repoblaciones se realizaron sobre suelos que antiguamente fueron campos de cultivo, pastos, matorrales o bosques naturales manejados. El uso que tuvo el suelo en el pasado condiciona la riqueza de especies que encontramos en un pinar de repoblación [@Navarro2013]. La cantidad de reclutas de especies de *Quercus* sp. que encontramos en un pinar de repoblación depende del uso del suelo previo a la repoblación y de la distancia a la fuente semillera. Existe un gradiente de intensidad de uso, así cuanto mas inteso fuera el uso del pasado antes de la repoblación forestal, menor probabilidad de encontrar reclutas de especies de *Quercus* sp. en la actualidad [@Navarro2013].
 
-Muchas repoblaciones se realizaron sobre suelos que antiguamente fueron campos de cultivo, pastos, matorrales o bosques naturales manejados. El uso que tuvo el suelo en el pasado condiciona la riqueza de especies que encontramos en un pinar de repoblación.
-
-El uso del suelo que una repoblación tuvo en el pasado influye en el regenerado de especies de *Quercus* que se observa en dichas repoblaciones en el presente y por tanto en la diversidad de estos ecosistemas [@Navarro2013]. Existe un gradiente de intensidad de uso, así cuanto mas inteso fuera el uso del pasado antes de la repoblación forestal, menos probabilidad de encontrar reclutas de especies de *Quercus* sp. en la actualidad [@Navarro2013].
-
-En este modulo el usuario puede elegir una categoría dentro de un gradiente de intensidad de uso antrópica antes de la repoblación de pinar. Este gradiente es (de mayor a menor intensidad de uso antrópico): cultivo, pastizal, matorral y bosque natural. 
+En este modulo el usuario puede elegir la intensidad de uso antrópico antes de que se estableciera la repoblación de pinar. El gradiente de uso (de mayor a menor intensidad de uso antrópico) es: cultivo, pastizal, matorral y bosque natural. 
 
 # Configuración del paisaje 
 
-La configuración del paisaje condiciona el funcionamiento de algunos procesos ecológicos [@Gonzalez2011]. La riqueza de especies bajo los pinares de repoblación varía en función de la cantidad de manchas de vegetación natural (fuentes de semillas) y de la distancia a las mismas. Así, mayor número de manchas de bosques naturales aumentarán la probabilidad de que lleguen más propágulos de especies nativas a dichas repoblaciones. 
+La configuración del paisaje condiciona el funcionamiento de algunos procesos ecológicos. La riqueza de especies bajo los pinares de repoblación varía en función de la cantidad de manchas de vegetación natural (fuente semillara) y de la distancia a las mismas [@Gonzalez2011]. Así, a mayor número de parches de bosques naturales, más probabilidad de que lleguen propágulos de especies nativas a dichas repoblaciones. Por otro lado, la cantidad y diversidad de semillas que aporta una fuente semillera, depende de su tamaño y composición específica. 
 
-La diversidad de semillas de una fuente semillera, dependerá de la diversidad específica que se encuentre en dicha fuente semillera. Los valores de diversidad de especies de la fuente semillera se han tomado de datos de inventarios forestales (SINFONEVADA; [@PerezLuque2014]). 
+La distancia a la fuente semillera afecta al proceso de dispersión de semillas [@Hewitt2002]. Distancias mas cortas a los parches de vegetación natural incrementan la probabilidad de que entren propágulos en la repoblación de pinar [@Gonzalez2011; @GomezAparicio2009]. El grado de adyacencia de las manchas de vetegación natural afecta igualmente a la cantidad de semillas introducidas dentro de la repoblación de pinar [@Zamora2010], de forma que cuanto mayor adyacencia, mayor entrada de semillas y mayor probabilidad de que se establezcan nuevas especies en los pinares de repoblación. 
 
-La distancia a la fuente semillera afecta al proceso de dispersión de semillas [@Hewitt2002]. Distancias mas cortas a los parches de vegetación natural incrementan la probabilidad de que entren propágulos en la repoblación de pinar [@Gonzalez2011, GomezAparicio2009]. Además, la adyacencia de estas manchas de vegetación natural, influyen en la cantidad de semillas introducidas dentro de la repoblación de pinar, y por tanto, en la probabilidad de que se establezcan nuevas especies en los pinares de repoblación [@Zamora2010]. 
-
-En este modulo el usuario determina el tamaño y el número de los parches de vegetación natural, y la aplicación genera de forma aleatoria una distribución de las diferentes manchas de vegetación en torno a la repoblación de pinar. Además 
-
+El usuario elige el tamaño y el número de los parches de vegetación natural, y la aplicación genera de forma aleatoria una distribución de las diferentes manchas de vegetación en torno a la repoblación de pinar. Los valores de diversidad de especies existentes en la fuente semillera se establecen basándose en datos procedentes de inventarios forestales (SINFONEVADA; [@PerezLuque2014]). 
 
 
 
